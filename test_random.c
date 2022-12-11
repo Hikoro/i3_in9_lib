@@ -3,6 +3,7 @@
 #include <time.h>
 
 #include "random.h"
+#include "random.c"
 
 int main(int argc, char*argv[]){
     //3.1 : A
@@ -14,6 +15,8 @@ int main(int argc, char*argv[]){
     valRandomDouble = random_double(1.00,1.00);
     printf("%lf\n",valRandomDouble);
 
+    printf("\n");
+
     //3.1 : B
     float valRandomFloat = random_float(1.0f,3.0f);
     printf("%f\n",valRandomFloat);
@@ -21,9 +24,13 @@ int main(int argc, char*argv[]){
     printf("%f\n",valRandomFloat);
     valRandomFloat = random_float(10.0f,10.0f);
     printf("%f\n",valRandomFloat);
-    
-    //3.1 : B
-    size_t valRandomSize_t = random_size_t(1,3);
+    valRandomFloat = random_float(-10.0f,10.0f);
+    printf("%f\n",valRandomFloat);
+
+    printf("\n");
+
+    //3.1 : C
+    size_t valRandomSize_t = random_size_t(1,40);
     printf("%lu\n",valRandomSize_t);
     valRandomSize_t = random_size_t(10,3.0);
     printf("%lu\n",valRandomSize_t);
@@ -31,5 +38,29 @@ int main(int argc, char*argv[]){
     printf("%lu\n",valRandomSize_t);
     valRandomSize_t = random_size_t(-10,10);
     printf("%lu\n",valRandomSize_t);
+
+    printf("\n");
+
+    //3.1 : D
+    int valRandomInt = random_int(1,40);
+    printf("%d\n",valRandomInt);
+    valRandomInt = random_int(1,3.0);
+    printf("%d\n",valRandomInt);
+    valRandomInt = random_int(10,10);
+    printf("%d\n",valRandomInt);
+    valRandomInt = random_int(-10,10);
+    printf("%d\n",valRandomInt);
+
+    printf("\n");
+
+    unsigned char valRandomChar = random_char('a','b');
+    printf("%c\n",valRandomChar);
+    valRandomChar = random_char('a','a');
+    printf("%c\n",valRandomChar);
+    valRandomChar = random_char('!','(');
+    printf("%c\n",valRandomChar);
+    valRandomChar = random_char('9','1');
+    printf("%c\n",valRandomChar);
+
     return 0;
 }

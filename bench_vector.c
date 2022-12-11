@@ -26,7 +26,12 @@ int main(int argc, char*argv[]){
 }
 
 void insert_erase_random(size_t init_size, size_t n){
-
+	p_s_vector p_vector = vector_alloc(init_size);
+	for(int i = 0; i < n; i++)
+	{
+		vector_insert(p_vector, size_t i, double v);
+		vector_erase(p_vector, random_size_t);
+	}
 }
 
 void insert_erase_head(size_t init_size, size_t n){
