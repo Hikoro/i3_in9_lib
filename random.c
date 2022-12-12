@@ -106,7 +106,7 @@ char random_char(char a, char b){
     char borneMin, borneMax;
     if (a == b) // pour éviter que a et b soient identiques PB ICI POUR <0
     {
-        printf("Erreur : valeurs interdites\n");
+        printf("Erreur : valeurs interdites");
         return 0;
     }
 
@@ -122,13 +122,14 @@ char random_char(char a, char b){
         borneMax = a;
     }
 
-    unsigned char val = (unsigned char)rand()%((borneMax-1)-borneMin)+borneMin;
-    return val;
+    return (char) (rand() / ((RAND_MAX + 1.0) / (borneMax-borneMin)) + borneMin);
 }
 
 void random_init_string(char * c, size_t n){
-    for(int i = 0; i < n; i++)
+    int i;
+    for(i = 0; i < ((int)n); i++)
     {
         c[i] = random_char('A', '[');
     }
+    c[n] = '\0';
 }

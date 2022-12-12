@@ -53,7 +53,7 @@ int main(int argc, char*argv[]){
 
     printf("\n");
 
-    unsigned char valRandomChar = random_char('a','b');
+    char valRandomChar = random_char('a','b');
     printf("%c\n",valRandomChar);
     valRandomChar = random_char('a','a');
     printf("%c\n",valRandomChar);
@@ -61,6 +61,17 @@ int main(int argc, char*argv[]){
     printf("%c\n",valRandomChar);
     valRandomChar = random_char('9','1');
     printf("%c\n",valRandomChar);
+
+    printf("\n");
+
+    char* c = malloc(sizeof(char)*10);
+    random_init_string(c, 1);
+    printf("%s\n",c);
+    random_init_string(c, 5);
+    printf("%s\n",c);
+    random_init_string(c, 10);
+    printf("%s\n",c);
+    free(c);
 
     return 0;
 }
