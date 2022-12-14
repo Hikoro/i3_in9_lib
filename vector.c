@@ -108,7 +108,6 @@ void vector_clear(p_s_vector p_vector){
         {
             vector_pop_back(p_vector);
         }
-        
     }
 }
 

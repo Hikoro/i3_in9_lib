@@ -29,6 +29,7 @@
     "**/.vscode/**"
   ],
   "files.associations": {
-    "random.h": "c"
+    "random.h": "c",
+    "vector.h": "c"
   }
 }
