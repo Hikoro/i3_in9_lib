@@ -89,9 +89,9 @@ void bubble_sort(size_t init_size, size_t n){
 		double value = random_double((double)rand(), (double)rand());
 		vector_set(p_vector, i, value);
 	}
-	for(int i = 0; i < n; i++)
+	for(int i = 0; i < init_size-1; i++)
 	{
-		for(int j = i; j < n; j++)
+		for(int j = i; j < init_size-1; j++)
 		{
 			if(p_vector->p[i] > p_vector->p[j+1])
 			{
