@@ -13,7 +13,8 @@ void read_write_random(size_t init_size, size_t n);
 void read_write_sequential(size_t init_size, size_t n); 
 void bubble_sort(size_t init_size, size_t n);
 
-int main(int argc, char*argv[]){
+int main(int argc, char*argv[])
+{
 	srand(time(NULL));
 
 	insert_erase_random(5,5);
@@ -27,7 +28,8 @@ int main(int argc, char*argv[]){
 	return 0;
 }
 
-void insert_erase_random(size_t init_size, size_t n){
+void insert_erase_random(size_t init_size, size_t n)
+{
 	p_s_vector p_vector = vector_alloc(init_size);
 	for(int i = 0; i < n; i++)
 	{
@@ -37,7 +39,8 @@ void insert_erase_random(size_t init_size, size_t n){
 	vector_free(p_vector);
 }
 
-void insert_erase_head(size_t init_size, size_t n){
+void insert_erase_head(size_t init_size, size_t n)
+{
 	p_s_vector p_vector = vector_alloc(init_size);
 	for(int i = 0; i < n; i++)
 	{
@@ -47,7 +50,8 @@ void insert_erase_head(size_t init_size, size_t n){
 	vector_free(p_vector);
 }
 
-void insert_erase_tail(size_t init_size, size_t n){
+void insert_erase_tail(size_t init_size, size_t n)
+{
 	p_s_vector p_vector = vector_alloc(init_size);
 	for(int i = 0; i < n; i++)
 	{
@@ -57,7 +61,8 @@ void insert_erase_tail(size_t init_size, size_t n){
 	vector_free(p_vector);
 }
 
-void read_write_random(size_t init_size, size_t n){
+void read_write_random(size_t init_size, size_t n)
+{
 	p_s_vector p_vector = vector_alloc(init_size);
 	for(int i = 0; i < n; i++)
 	{
@@ -70,7 +75,8 @@ void read_write_random(size_t init_size, size_t n){
 	vector_free(p_vector);
 }
 
-void read_write_sequential(size_t init_size, size_t n){
+void read_write_sequential(size_t init_size, size_t n)
+{
 	p_s_vector p_vector = vector_alloc(init_size);
 	for(int i = n; i > 0; i--)
 	{
@@ -82,7 +88,8 @@ void read_write_sequential(size_t init_size, size_t n){
 	vector_free(p_vector);
 }
 
-void bubble_sort(size_t init_size, size_t n){
+void bubble_sort(size_t init_size, size_t n)
+{
 	p_s_vector p_vector = vector_alloc(init_size);
 	for(int i = 0; i < n; i++)
 	{
