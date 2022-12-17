@@ -3,11 +3,14 @@
 #include <time.h>
 
 #include "random.h"
-#include "random.c"
+
 
 int main(int argc, char*argv[]){
     //3.1 : A
+    
     srand(time(NULL));
+
+    
     double valRandomDouble = random_double(1.0,3.0);
     printf("%lf\n",valRandomDouble);
     valRandomDouble = random_double(10.0,1.0);
@@ -52,6 +55,7 @@ int main(int argc, char*argv[]){
     printf("%d\n",valRandomInt);
 
     printf("\n");
+    
 
     char valRandomChar = random_char('a','b');
     printf("%c\n",valRandomChar);
@@ -72,6 +76,6 @@ int main(int argc, char*argv[]){
     random_init_string(c, 10);
     printf("%s\n",c);
     free(c);
-
+    
     return 0;
 }
